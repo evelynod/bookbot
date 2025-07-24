@@ -16,6 +16,11 @@
 
 # "{num_words} words found in the document"
 
+###########################################################################################
+
+# Current problems:  num_words remains 0.  If I try to only define variables inside functions, 
+# they don't remain defined, even if they are "returned".  I don't understand that.
+
 
 
 path_to_file = "books/frankenstein.txt"    
@@ -27,11 +32,12 @@ def get_book_text(path_to_file):
     with open(path_to_file) as f:
         file_contents = f.read()   # f is a file object
 
-  #  print({file_contents})  
+   # print({file_contents})  
     return file_contents      #file_contents will be used in number_of_words function
 
 
 def number_of_words(file_contents) :
+    
     num_words = file_contents.split()    #split the file into words.  
     
 
