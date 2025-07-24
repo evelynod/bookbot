@@ -38,7 +38,7 @@ def get_book_text(path_to_file):
     with open(path_to_file) as f:
         file_contents = f.read()   # f is a file object
 
-   # print({file_contents})  
+    print({file_contents})  
     return file_contents      #file_contents will be used in number_of_words function
 
 
@@ -46,16 +46,16 @@ def number_of_words(file_contents) :
     
     split_contents = file_contents.split()    #split the file into words. 
  
-    return split_contents             
+    return split_contents , file_contents           
     
     
 
 
 def main():
     get_book_text(path_to_file)  
-    number_of_words(file_contents)  
-    print(f"{num_words} words found in the document") 
-    print(split_contents)    #testing
+   
+    
+    
 
 
     
