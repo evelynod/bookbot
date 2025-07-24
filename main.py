@@ -31,19 +31,19 @@ def get_book_text(path_to_file):
     return file_contents      #file_contents will be used in number_of_words function
 
 
-def number_of_words(file_contents):
-    #Accept the text from the book as a string, and returns the number of words in the string
-    #Write function here.
+def number_of_words(file_contents) :
+    num_words = file_contents.split()    #split the file into words.  
+    
 
-
-    print(f"{num_words} words found in the document")
+    return num_words                 
+    
     
 
 
 def main():
     get_book_text(path_to_file)  
-    number_of_words(file_contents) 
-    
+    number_of_words(file_contents)  
+    print(f"{num_words} words found in the document")    
 
 
     
