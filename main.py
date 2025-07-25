@@ -36,8 +36,10 @@ def get_book_text(path_to_file):
 
 
 def number_of_words(file_contents) :
-    split_contents = file_contents.split()    #split the file into words. 
-    return split_contents , file_contents    
+    split_contents = file_contents.split()    #split the file into words. At this point it is 
+                                              #listing the words, but not counting them.
+
+    return split_contents     
 
       
     
@@ -49,6 +51,12 @@ def main():
    # get_book_text(path_to_file)
     my_book_text = get_book_text(path_to_file) #Define new variable for get_book_text return value
     print(f"The first 200 characters: {my_book_text[:200]}")  #test to see if my_book_text works
+
+    ### Now run number_of_words.  The book text was called "file_contents" in the 
+    ### get_book_text function, but it is "my_book_text" in this main function.  
+
+    split_text = number_of_words(my_book_text)   #Call number of words function. 
+    print(f"Here are the first 200 words in a list: {split_text [:200]}") #This works!!
 
 
    
