@@ -23,7 +23,7 @@
 
 path_to_file = "books/frankenstein.txt"    
 num_words = 0     # Declare variable for the number of words.
-split_contents = []
+list_of_words = []
 
 
 def get_book_text(path_to_file): 
@@ -36,10 +36,11 @@ def get_book_text(path_to_file):
 ########## This function will count the words #######
 
 def number_of_words(file_contents) :
-    split_contents = file_contents.split()    #split the file into words. At this point it is 
-                                              #listing the words, but not counting them.
+    list_of_words = file_contents.split()    #split the file into words. At this point it is 
     
-    return (split_contents)     
+                                             
+    
+    return (list_of_words)     
 
       
   
