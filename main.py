@@ -36,11 +36,12 @@ def get_book_text(path_to_file):
 ########## This function will count the words #######
 
 def number_of_words(file_contents) :
-    list_of_words = file_contents.split()    #split the file into words. At this point it is 
-    
-                                             
-    
-    return (list_of_words)     
+    list_of_words = file_contents.split()    #split the file into a list of words
+    count = 0                                #iterates for each word in the list
+    for word in list_of_words:               #and returns a total count of the words
+        count += 1
+                                               
+    return (count)                             
 
       
   
@@ -49,8 +50,9 @@ def main():
    
    
     my_book_text = get_book_text(path_to_file) 
-    split_text = number_of_words(my_book_text,)   #Call number of words function--still just lists 
-    print(f"Here are the first 20 words in a list: {split_text [:20]}") #This works!!
+    word_count = number_of_words(my_book_text,)   #Call number of words function 
+    print(f"{word_count} words found in the document")
+   
 
 
      
