@@ -18,19 +18,12 @@
 
 ###########################################################################################
 
-# Current problems:  num_words remains 0.  If I try to only define variables inside functions, 
-# they don't remain defined, even if they are "returned".  I don't understand that.
-
-###########################################################################################
-
-# 7/24/25  Realized that .split() results in a list, not an integer.  .split() is just the first 
-# step of the number_of_words function.
 
 
 
 path_to_file = "books/frankenstein.txt"    
 num_words = 0     # Declare variable for the number of words.
-file_contents = ""
+#file_contents = ""
 split_contents = []
 
 
@@ -38,21 +31,26 @@ def get_book_text(path_to_file):
     with open(path_to_file) as f:
         file_contents = f.read()   # f is a file object
 
-    print({file_contents})  
+    #print({file_contents})  
     return file_contents      #file_contents will be used in number_of_words function
 
 
 def number_of_words(file_contents) :
-    
     split_contents = file_contents.split()    #split the file into words. 
- 
-    return split_contents , file_contents           
+    return split_contents , file_contents    
+
+      
     
     
 
 
 def main():
-    get_book_text(path_to_file)  
+    
+   # get_book_text(path_to_file)
+    my_book_text = get_book_text(path_to_file) #Define new variable for get_book_text return value
+    print(f"The first 200 characters: {my_book_text[:200]}")  #test to see if my_book_text works
+
+
    
     
     
