@@ -44,8 +44,8 @@ def main():
     my_book_text = get_book_text(path_to_file) 
     word_count = number_of_words(my_book_text,)   #Call number of words function 
     print(f"{word_count} words found in the document")
-    char_counts = count_specific_chars(my_book_text)
-    print(f"This quote needs to change: {char_counts}")      #change this quote for assignment
+    book_char_counts = count_specific_chars(my_book_text)
+    print(book_char_counts)      #change this quote for assignment
  
   
  
