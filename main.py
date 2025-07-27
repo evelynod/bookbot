@@ -35,7 +35,7 @@ def get_book_text(path_to_file):
 
 
 from stats import number_of_words       #Refactoring  The number_of_words function is now in stats.py           
-                                               
+from stats import count_specific_chars                                                  
                                     
 
 def main():
@@ -44,7 +44,8 @@ def main():
     my_book_text = get_book_text(path_to_file) 
     word_count = number_of_words(my_book_text,)   #Call number of words function 
     print(f"{word_count} words found in the document")
-
+    char_counts = count_specific_chars(my_book_text)
+    print(f"This quote needs to change: {char_counts}")      #change this quote for assignment
  
   
  
