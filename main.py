@@ -21,13 +21,27 @@
 
 
 
-path_to_file = "books/frankenstein.txt"    
+
+import sys     # At the beginning of main.py, import the built-in sys module.
+
+path_to_book = ""    #Remove any hard coded book paths from your code.
+
+# If sys.argv doesn't have two entries:
+# This if statement ensures that the user only inputs one argument (+ the file name in first pos)
+if len(sys.argv) != 2:
+    print ("Usage: python3 main.py <path_to_book>")   # May need to change that to path_to_file
+    sys.exit(1)
+
+#path_to_file = sys.argv[1]
+
+
+
 num_words = 0     # Declare variable for the number of words.
 list_of_words = []
 
 
-def get_book_text(path_to_file): 
-    with open(path_to_file) as f:
+def get_book_text(path_to_book): 
+    with open(path_to_book) as f:
         file_contents = f.read()   # f is a file object
       
     return file_contents      #file_contents will be used in number_of_words function
@@ -42,7 +56,7 @@ from stats import get_sorted_characters
 def main():
    
    
-    my_book_text = get_book_text(path_to_file) 
+    my_book_text = get_book_text(path_to_book) 
     word_count = number_of_words(my_book_text,)   #Call number of words function 
     print ("============ BOOKBOT ============")
     print ("Analyzing book found at books/frankenstein.txt...")
