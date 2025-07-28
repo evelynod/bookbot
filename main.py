@@ -44,9 +44,13 @@ def main():
    
     my_book_text = get_book_text(path_to_file) 
     word_count = number_of_words(my_book_text,)   #Call number of words function 
-    print(f"{word_count} words found in the document")
+    print ("============ BOOKBOT ============")
+    print ("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count -----------")
+    print(f"Found {word_count} total words")  # Correct wording for assignment
+    print("--------- Character Count ---------")
     book_char_counts = count_specific_chars(my_book_text)
-    print(book_char_counts)      #This will not be used; it's a placeholder for ----
+    
     ##
     #To filter out non-alphabetical characters and print characters with their counts
     sorted_chars = get_sorted_characters(book_char_counts)
