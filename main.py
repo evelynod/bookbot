@@ -37,7 +37,7 @@ def get_book_text(path_to_file):
 from stats import number_of_words       #Refactoring  The number_of_words function is now in stats.py           
 from stats import count_specific_chars                                                  
 from stats import get_sorted_characters
-                                    
+
 
 def main():
    
@@ -46,7 +46,13 @@ def main():
     word_count = number_of_words(my_book_text,)   #Call number of words function 
     print(f"{word_count} words found in the document")
     book_char_counts = count_specific_chars(my_book_text)
-    print(book_char_counts)      #change this quote for assignment
+    print(book_char_counts)      #This will not be used; it's a placeholder for ----
+    ##
+    #To filter out non-alphabetical characters and print characters with their counts
+    sorted_chars = get_sorted_characters(book_char_counts)
+    for char_dict in sorted_chars:
+        if char_dict["char"].isalpha():
+            print(f"{char_dict['char']}: {char_dict['num']}")
  
   
  
