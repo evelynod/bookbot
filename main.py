@@ -32,7 +32,15 @@ if len(sys.argv) != 2:
     print ("Usage: python3 main.py <path_to_book>")   # May need to change that to path_to_file
     sys.exit(1)
 
-#path_to_file = sys.argv[1]
+path_to_book = sys.argv[1]  #This puts the user-input book path in 2nd position
+
+with open (filename, 'r') as file:    #parameters are suggestions.  Check early assignment to verify
+    text = file.read()                # what variables we actually have been using.
+    #Now we have the book text in 'text'
+    print (f"the book has {len(text)} characters.")      #This was Boots' suggestion. Confirm.                                 
+
+
+
 
 
 
