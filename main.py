@@ -57,6 +57,7 @@ def main():
     for char_dict in sorted_chars:
         if char_dict["char"].isalpha():
             print(f"{char_dict['char']}: {char_dict['num']}")
+    print ("============= END =============")
  
   
  
