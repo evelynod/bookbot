@@ -36,6 +36,7 @@ def get_book_text(path_to_file):
 
 from stats import number_of_words       #Refactoring  The number_of_words function is now in stats.py           
 from stats import count_specific_chars                                                  
+from stats import get_sorted_characters
                                     
 
 def main():

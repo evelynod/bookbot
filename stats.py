@@ -20,5 +20,21 @@ def count_specific_chars(text):
         if char not in char_counts:
             char_counts[char] = 0
         char_counts[char] += 1
-    
+
     return char_counts
+
+# get_sorted_characters function takes character count dictionary as input
+# Returns a list of dictionaries like [{"char" : "r", "num" : 290}, {"char": "a", "num": 25}]
+# Sorts from highest count to lowest
+# Uses the .sort() method
+
+def get_sorted_characters(char_counts):
+    # Convert to list of dictionaries
+    char_list = []
+    for char, count in char_counts.items():
+        char_list.append({"char": char, "num": count})
+    
+    # Sort using .sort() method
+    char_list.sort(key=lambda x: x["num"], reverse=True)
+    
+    return char_list
