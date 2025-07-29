@@ -67,7 +67,7 @@ def main():
     my_book_text = get_book_text(path_to_book) 
     word_count = number_of_words(my_book_text,)   #Call number of words function 
     print ("============ BOOKBOT ============")
-    print ("Analyzing book found at books/frankenstein.txt...")
+    print (f"Analyzing book found at {path_to_book}...")
     print("----------- Word Count -----------")
     print(f"Found {word_count} total words")  # Correct wording for assignment
     print("--------- Character Count ---------")
